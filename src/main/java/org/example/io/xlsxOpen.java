@@ -1,10 +1,13 @@
-package org.example;
+package org.example.io;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.enums.StudyProfile;
+import org.example.model.Student;
+import org.example.model.University;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="971d64d5-1355-48cc-9fc3-ceed76f7ec69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/xlsxOpen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/universityInfo.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/StudentAvgExamScoreComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/StudentComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/StudentCourseNumberComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/StudentFullNameComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/StudentUniversityIdComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/UniversityComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/UniversityFullNameComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/UniversityIdComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/UniversityMainProfileComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/UniversityShortNameComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/comparator/UniversityYearOfFoundationComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/StudentComparatorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/UniversityComparatorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/util/ComparatorUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/universityInfo.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StudyProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StudyProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StudyProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/StudyProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/xlsxOpen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/io/xlsxOpen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -38,25 +53,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.33908045&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.33908045",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="Project_24.7" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,11 +85,11 @@
       </method>
     </configuration>
     <configuration name="University" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.University" />
+      <option name="MAIN_CLASS_NAME" value="org.example.model.University" />
       <module name="Project_24.7" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,6 +117,7 @@
       <workItem from="1673758895803" duration="282000" />
       <workItem from="1673759188050" duration="11260000" />
       <workItem from="1673797498352" duration="43000" />
+      <workItem from="1674443940478" duration="6180000" />
     </task>
     <servers />
   </component>
