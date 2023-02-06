@@ -14,8 +14,8 @@ import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class xlsxOpen {
-    private xlsxOpen() {
+public class XlsxOpen {
+    private XlsxOpen() {
     }
 
     public static ArrayList<Student> getStudents(File file) {

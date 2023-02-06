@@ -4,20 +4,24 @@ import org.example.comparator.StudentComparator;
 import org.example.comparator.UniversityComparator;
 import org.example.enums.StudentComparatorType;
 import org.example.enums.UniversityComparatorType;
-import org.example.io.xlsxOpen;
+import org.example.io.XlsxOpen;
+import org.example.io.XlsxWrite;
+import org.example.model.Statistics;
 import org.example.model.Student;
 import org.example.model.University;
 import org.example.util.ComparatorUtil;
 import org.example.util.JsonUtil;
+import org.example.util.StatisticsUtil;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         File file = new File("src/resources/universityInfo.xlsx");
 
-        List<Student> students = xlsxOpen.getStudents(file);
+        List<Student> students = XlsxOpen.getStudents(file);
         StudentComparator studentComparator = ComparatorUtil
                 .getStudentComparator(StudentComparatorType.AVG_EXAM_SCORE);
         students.sort(studentComparator);
@@ -36,7 +40,7 @@ public class Main {
             System.out.println(studentFromJson);
         });
 
-        List<University> universities = xlsxOpen.getUniversity(file);
+        List<University> universities = XlsxOpen.getUniversity(file);
         UniversityComparator universityComparator = ComparatorUtil
                 .getUniversityComparator(UniversityComparatorType.YEAR_OF_FOUNDATION);
         universities.sort(universityComparator);
@@ -54,5 +58,8 @@ public class Main {
             // проверяем, что обратно элемент воссоздаётся
             System.out.println(universityFromJson);
         });
+
+        List<Statistics> statisticsList = StatisticsUtil.createStatistics(students, universities);
+        XlsxWrite.writeXlsxStatistics(statisticsList, "statistics.xlsx");
     }
 }
