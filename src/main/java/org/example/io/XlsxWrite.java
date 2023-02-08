@@ -11,14 +11,19 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class XlsxWrite {
+    private static final Logger logger = Logger.getLogger(XlsxWrite.class.getName());
 
     private XlsxWrite() {
     }
 
     public static void writeXlsxStatistics(List<Statistics> statisticsList,
                                           String filePath) throws IOException {
+
+        logger.log(Level.INFO, "Excel writing started");
 
         try (XSSFWorkbook workbook = new XSSFWorkbook()) {
             XSSFSheet statisticsSheet = workbook.createSheet("Статистика");
@@ -64,9 +69,10 @@ public class XlsxWrite {
             try (FileOutputStream outputStream = new FileOutputStream(filePath)) {
                 workbook.write(outputStream);
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.log(Level.SEVERE, "New excel file writing failed", e);
             }
         }
 
+        logger.log(Level.INFO, "Excel writing finished successfully");
     }
 }

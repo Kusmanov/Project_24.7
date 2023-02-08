@@ -13,14 +13,19 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class XlsxOpen {
-    private XlsxOpen() {
+public class XlsxRead {
+    private static final Logger logger = Logger.getLogger(XlsxRead.class.getName());
+    private XlsxRead() {
     }
 
     public static ArrayList<Student> getStudents(File file) {
         ArrayList<Student> collection = new ArrayList<>();
         try {
+            logger.log(Level.INFO, "Excel reading started");
+
             FileInputStream fis = new FileInputStream(file);
             Workbook workbook = null;
             if (file.getName().toLowerCase().endsWith("xlsx")) {
@@ -48,14 +53,18 @@ public class XlsxOpen {
                 }
             }
         } catch (Exception e) {
-            e.getStackTrace();
+            logger.log(Level.SEVERE, "Excel reading failed", e);
         }
+
+        logger.log(Level.INFO, "Excel reading finished successfully");
         return collection;
     }
 
     public static ArrayList<University> getUniversity(File file) {
         ArrayList<University> collection = new ArrayList<>();
         try {
+            logger.log(Level.INFO, "Excel reading started");
+
             FileInputStream fis = new FileInputStream(file);
             Workbook workbook = null;
             if (file.getName().toLowerCase().endsWith("xlsx")) {
@@ -84,8 +93,10 @@ public class XlsxOpen {
                 }
             }
         } catch (Exception e) {
-            e.getStackTrace();
+            logger.log(Level.SEVERE, "Excel reading failed", e);
         }
+
+        logger.log(Level.INFO, "Excel reading finished successfully");
         return collection;
     }
 }

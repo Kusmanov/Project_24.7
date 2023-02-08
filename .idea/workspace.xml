@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="971d64d5-1355-48cc-9fc3-ceed76f7ec69" name="Changes" comment="task 27.8">
+    <list default="true" id="971d64d5-1355-48cc-9fc3-ceed76f7ec69" name="Changes" comment="third">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statistics.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/io/XlsxOpen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/io/XlsxRead.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/io/XlsxWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/io/XlsxWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/StatisticsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/StatisticsUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -38,9 +45,14 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.33908045&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -50,7 +62,7 @@
       <module name="Project_24.7" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -59,11 +71,11 @@
       </method>
     </configuration>
     <configuration name="University" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.University" />
+      <option name="MAIN_CLASS_NAME" value="org.example.model.University" />
       <module name="Project_24.7" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,13 +103,17 @@
       <workItem from="1673758895803" duration="282000" />
       <workItem from="1673759188050" duration="11260000" />
       <workItem from="1673797498352" duration="43000" />
+      <workItem from="1674443940478" duration="6885000" />
+      <workItem from="1674618267483" duration="21000" />
+      <workItem from="1675307899755" duration="5002000" />
+      <workItem from="1675833423704" duration="8176000" />
     </task>
-    <task id="LOCAL-00001" summary="task 27.8">
-      <created>1675697329201</created>
+    <task id="LOCAL-00001" summary="third">
+      <created>1674450361661</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1675697329201</updated>
+      <updated>1674450361661</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -117,7 +133,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="task 27.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="task 27.8" />
+    <MESSAGE value="third" />
+    <option name="LAST_COMMIT_MESSAGE" value="third" />
   </component>
 </project>
