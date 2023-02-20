@@ -4,8 +4,11 @@ import org.example.comparator.StudentComparator;
 import org.example.comparator.UniversityComparator;
 import org.example.enums.StudentComparatorType;
 import org.example.enums.UniversityComparatorType;
+import org.example.io.JsonWrite;
 import org.example.io.XlsxRead;
 import org.example.io.XlsxWrite;
+import org.example.io.XmlWrite;
+import org.example.model.FullInfo;
 import org.example.model.Statistics;
 import org.example.model.Student;
 import org.example.model.University;
@@ -14,6 +17,7 @@ import org.example.util.StatisticsUtil;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -75,6 +79,15 @@ public class Main {
 
         List<Statistics> statisticsList = StatisticsUtil.createStatistics(students, universities);
         XlsxWrite.writeXlsxStatistics(statisticsList, "statistics.xlsx");
+
+        FullInfo fullInfo = new FullInfo()
+                .setStudentList(students)
+                .setUniversityList(universities)
+                .setStatisticsList(statisticsList)
+                .setProcessDate(new Date());
+
+        XmlWrite.generateXmlReq(fullInfo);
+        JsonWrite.writeJsonReq(fullInfo);
 
         logger.log(INFO, "Application finished");
     }
